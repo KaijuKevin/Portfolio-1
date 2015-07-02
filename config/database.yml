@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: portfolio_development
+
+test:
+  <<: *default
+  database: portfolio_test
+
+production:
+  <<: *default
+  database: portfolio_production
+  username: portfolio_do
+  password: <%= ENV['EXAMPLE_DATABASE_PASSWORD'] %>
