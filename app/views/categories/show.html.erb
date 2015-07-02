@@ -1,5 +1,24 @@
+
 <h1><%= @category.name %></h1>
 
-<p><%= link_to "Return to Categories", categories_path %></p>
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Delete', category_path(@category), data: { confirm: "Are you sure?", method: "delete"} %>
+  <div class= 'well'>
+    <p><b>Description:</b> <%= @category.description %></p>
+  </div>
+
+<h2>Projects</h2>
+
+  <% if @category.projects.any? %>
+    <ul>
+      <% @category.projects.each do |project| %>
+        <li><%= link_to project.name, category_project_path(@category, project) %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no projects.</p>
+  <% end %>
+
+  <br>
+
+<%= link_to 'Add a Project', new_category_project_path(@category) %> |
+<%= link_to 'Edit Category', edit_category_path(@category) %> |
+<%= link_to 'Delete Category', category_path(@category), data: { confirm: "Are you sure?", method: "delete"} %>

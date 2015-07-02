@@ -1,7 +1,13 @@
-<h1>Categories</h1>
+<h1>Coding Skills</h1>
 
 <ul>
   <% @categories.each do |category| %>
     <li><%= link_to category.name, category_path(category) %></li>
   <% end %>
+</ul>
+
+<h3>About</h3>
+<p>My name is Leon Zagorouiko and I'm currently attending Epicodus.</p>
+<ul>
+  <li>github: https://github.com/Zagorouiko</li>
 </ul>

@@ -5,22 +5,20 @@
 
   <ul>
     <% @category.projects.each do |project| %>
-      <li>
-        <%= project.description %> |
+
+        <div class= 'well'>
+        <li>Name: <%= project.name %></li><br>
+        <li>Description: <%= project.description %></li><br>
+        <li>Link: <%= project.link %></li><br>
+      </div>
+
         <%= link_to "Edit", edit_category_project_path(@category, project) %> |
         <%= link_to "Delete", category_project_path(@category, project),
                                  :data => {:confirm => "Are you sure?",
                                                 :method => "delete"} %>
-      </li>
+
     <% end %>
   </ul>
 <% else %>
   <p>There are no projects yet!</p>
 <% end %>
-
-<p><%= link_to "Add a Project", new_category_project_path(@category) %></p>
-<p><%= link_to "Delete Category", category_path(@category),
-                        :data => {:confirm => "Are you sure?",
-                                       :method => "delete"} %></p>
-
-<p><%= link_to "Return to categories", categories_path %></p>
