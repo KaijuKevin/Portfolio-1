@@ -17,6 +17,8 @@ rails server
 
 Then go to localhost:3000 in a web browser.
 
+Problem deploying to heroku through linux system, currently trying to solve the issue.
+
 Copyright and License
 =======================
 
