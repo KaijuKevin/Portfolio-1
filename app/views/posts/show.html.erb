@@ -1,0 +1,35 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+
+<div class="comments">
+	<h3>Comments</h3>
+	<% if @comments.any? %>
+		<ul>
+			<% @comments.each do |comment| %>
+				<li><%= comment.body %> - <%= link_to "View more", post_comment_path(@post, comment)  %></li>
+			<% end %>
+		</ul>
+	<% else %>
+		<p>There are no comments</p>
+	<% end %>
+
+	<% if user_signed_in? %>
+		<div>
+			<%= render partial: "comments/form" %>
+		</div>
+	<% else %>
+		<p>Please sign in to add a comment.</p>
+	<% end %>
+</div>
+
+<% if can? :mangage, Post %>
+	<div class="admin">
+		<h3>Admin panel</h3>
+		<nav>
+			<ul class="nav nav-pills">
+				<li role="presentation"><%= link_to "Edit", edit_post_path(@post) %></li>
+				<li><%= link_to "Delete", post_path(@post), data: { confirm: "Are you sure?" }, method: :delete %></li>
+			</ul>
+		</nav>
+	</div>
+<% end %>

@@ -16,8 +16,12 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
+
+  config.assets.initialize_on_precompile = false
 
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load

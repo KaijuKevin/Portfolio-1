@@ -8,6 +8,8 @@ gem 'bootstrap-sass'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
+gem 'devise'
+gem 'cancancan'
 gem 'turbolinks'
 
 
@@ -27,6 +29,8 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'simplecov', require: false
 end
 
 # gem 'capistrano-rails', group: :development
