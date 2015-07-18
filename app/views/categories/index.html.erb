@@ -11,3 +11,13 @@
 <ul>
   <li>github: https://github.com/Zagorouiko</li>
 </ul>
+
+<h2>References</h2>
+	<div id="recommendation_form_container">
+	</div>
+	<% if user_signed_in? %>
+		<p><%= link_to "Add recommendation", new_recommendation_path, id: "new_recommendation_link", remote: true %><p>
+	<% else %>
+		<p>Please sign in to add a recommendation.</p>
+	<% end %>
+		<div id="recommendations_list">

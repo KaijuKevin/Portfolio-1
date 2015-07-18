@@ -30,6 +30,10 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null,
@@ -522,9 +526,12 @@
         1,
         1,
         null,
+        null,
+        1,
         null
       ],
       "/home/leon/Desktop/Portfolio/app/models/user.rb": [
+        1,
         1,
         1,
         1,
@@ -689,11 +696,26 @@
         1,
         null
       ],
+      "/home/leon/Desktop/Portfolio/spec/models/recommendation_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/home/leon/Desktop/Portfolio/app/models/recommendation.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/home/leon/Desktop/Portfolio/spec/models/user_spec.rb": [
         1,
         null,
         1,
-        1,
+        2,
+        2,
         null
       ],
       "/home/leon/Desktop/Portfolio/app/controllers/categories_controller.rb": [
@@ -819,6 +841,6 @@
         null
       ]
     },
-    "timestamp": 1436577388
+    "timestamp": 1437179110
   }
 }
