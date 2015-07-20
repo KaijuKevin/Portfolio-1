@@ -1,10 +1,6 @@
-<nav>
-	<ul class="nav nav-pills">
-		<li role="presentation"><%= link_to "New Post", new_post_path %></li>
-	</ul>
-</nav>
 
-<h1>Recent Posts</h1>
+<h1>My Blog</h1>
+<%= link_to "New Post", new_post_path %>
 
 <ul>
 	<% @posts.each do |post| %>

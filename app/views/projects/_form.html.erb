@@ -1,6 +1,6 @@
 <%= render('layouts/errors', :object => @project) %>
 
-<%= form_for [@category, @project] do |f| %>
+<%= bootstrap_form_for [@category, @project] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :link %>

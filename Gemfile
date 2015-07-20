@@ -11,6 +11,8 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'cancancan'
 gem 'turbolinks'
+gem 'bootswatch-rails'
+gem 'bootstrap_form'
 
 
 

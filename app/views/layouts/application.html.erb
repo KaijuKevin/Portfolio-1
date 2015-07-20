@@ -7,23 +7,46 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <ul class="nav navbar-nav">
+  <div class="wrapper">
+    <div class="box">
+      <div class="row row-offcanvas row-offcanvas-left">
+      <!-- <nav class="navbar navbar-inverse navbar-fixed-top"> -->
+        <div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
+
+      <ul class="nav">
+        <ul class="nav hidden-xs" id="lg-menu">
         <li><%= link_to "Home", categories_path %></li>
-        <li><%= link_to "Add Category", new_category_path %></li>
+        <li><%= link_to "Add Skill", new_category_path %></li>
         <li><%= link_to "Blog", posts_path %></li>
-        <% if user_signed_in? %>
-  <strong><%= current_user.email %></strong>.
-  <%= link_to 'Edit profile', edit_user_registration_path %> |
-  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to "Sign up", new_user_registration_path %> |
-  <%= link_to "Login", new_user_session_path %>
-<% end %>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
       </ul>
-    </nav>
-    <%= yield %>
+    </ul>
+    <ul class="list-unstyled hidden-xs" id="sidebar-footer">
+      <li>
+        <% if user_signed_in? %>
+        <li><i class="glyphicon glyphicon-heart-empty"></i><%= current_user.email %></li>
+        <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+        <% end %>      </li>
+    </ul>
+    <!-- </nav> -->
+    </div>
+    <div class="column col-sm-10 col-xs-11" id="main">
+        <div class="full col-sm-9">
+          <div class="row">
+            <div class="panel panel-default"
+            <%= yield %>
+          </div>
+          </div>
+        </div>
+    </div>
+   </div>
   </div>
+ </div>
+
 </body>
 </html>
