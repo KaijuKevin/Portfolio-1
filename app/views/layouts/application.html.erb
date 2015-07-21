@@ -19,6 +19,11 @@
         <li><%= link_to "Home", categories_path %></li>
         <li><%= link_to "Add Skill", new_category_path %></li>
         <li><%= link_to "Blog", posts_path %></li>
+        <li>_________ </li>
+        <li>Projects</li>
+        <% Category.all.each do |category| %>
+        <li><%= link_to category.name, category_path(category) %></li>
+        <% end %>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
       </ul>

@@ -1,26 +1,31 @@
 <h1><%= @post.title %></h1>
+<div class="well">
 <p><%= @post.body %></p>
+</div>
 
 <div class="comments">
-	<h3>Comments</h3>
+	<p><b><i>Comments</i></b></p>
 	<div id="comments_container">
+		<div class="well">
 		<%= render 'comments/list' %>
 	</div>
+	</div>
+
 
 	<div id="comment_form_container">
 		<% if user_signed_in? %>
-			<%= link_to "New comment", new_post_comment_path(@post, @comment), id: "new_comment_link", remote: true  %>
-		<% else %>
-			<p>Please sign in to add a comment.</p>
-		<% end %>
 	</div>
 </div>
 
+
 <% if can? :mangage, Post %>
 	<div class="admin">
-		<h3>Admin panel</h3>
 		<nav>
 			<ul class="nav nav-pills">
+				<%= link_to "New comment", new_post_comment_path(@post, @comment), id: "new_comment_link", remote: true  %>
+				<% else %>
+				<p>Please sign in to add a comment.</p>
+				<% end %>
 				<li role="presentation"><%= link_to "Edit", edit_post_path(@post) %></li>
 				<li><%= link_to "Delete", post_path(@post), data: { confirm: "Are you sure?" }, method: :delete %></li>
 			</ul>
