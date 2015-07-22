@@ -32,6 +32,10 @@
  // Whatever application styles you have go last
  // @import "base";
 
+.img-responsive {
+  border-radius: 10%;
+}
+
 
 .glyphicon {
   color: red;
@@ -369,6 +373,12 @@ small.text-muted {
     -moz-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
   }
+
+@media(max-width: 768px) {
+  .img-responsive{
+    display: none;
+  }
+}
 
   .row-offcanvas-left.active {
     left: 33%;

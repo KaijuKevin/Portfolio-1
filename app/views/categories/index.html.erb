@@ -14,3 +14,9 @@
 		<p>Please sign in to add a recommendation.</p>
 	<% end %>
 		<div id="recommendations_list">
+      <ul>
+        <% @recommendations.each do |recommendation| %>
+          <li> <%= recommendation.description %> - <%= recommendation.user.username %> </li>
+        <% end %>
+      </ul>
+    </div>
