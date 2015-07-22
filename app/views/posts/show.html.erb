@@ -1,14 +1,10 @@
 <h1><%= @post.title %></h1>
-<div class="well">
 <p><%= @post.body %></p>
-</div>
 
 <div class="comments">
 	<p><b><i>Comments</i></b></p>
 	<div id="comments_container">
-		<div class="well">
 		<%= render 'comments/list' %>
-	</div>
 	</div>
 
 
