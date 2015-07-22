@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  load_and_authorize_resource
   def show
       @category = Category.find(params[:category_id])
       @project = Project.find(params[:id])
