@@ -104,7 +104,7 @@ a {
 html, body {
   height: 100%;
   font-family:verdana,arial,sans-serif;
-  color:#555555;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .nav {
@@ -199,7 +199,7 @@ hr {
   background-color:#e9eaed;
   padding-left:0;
   padding-right:0;
-  background: image-url("background.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);;
+  background: image-url("town.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);;
   background-repeat: no-repeat;
 }
 #main .img-circle {
