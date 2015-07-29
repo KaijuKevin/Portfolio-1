@@ -32,6 +32,21 @@
  // Whatever application styles you have go last
  // @import "base";
 
+ #error_explanation {
+   background-color: rgba(0, 0, 0, 0.54);
+   color: red;
+ }
+
+ #flash_alert {
+   position: relative;
+   z-index: 10;
+   color: red;
+   text-align: center;
+   background-color: rgba(0, 0, 0, 0.54);
+   margin-left: 800px;
+   width: 300px;
+ }
+
  .jumbotron {
    background: image-url("well.gif");
    background-repeat: no-repeat;
@@ -252,6 +267,7 @@ hr {
   background-color:transparent;
   text-shadow:0 0 2px #000000;
   padding-left:5px;
+  z-index: 11;
 }
 #sidebar .nav li>a:hover {
   background-color:#393939;
@@ -443,6 +459,7 @@ body {
 /*=== 2. Anchor Link ===*/
 a {
   color: #FFFFFF;
+  background-color: black;
   transition: all ease-in-out 200ms;
 }
 a:hover {
@@ -451,7 +468,7 @@ a:hover {
 }
 /*=== 3. Text Outside the Box ===*/
 .etc-login-form {
-  color: #919191;
+  color: #0000000;
   padding: 10px 20px;
 }
 .etc-login-form p {
@@ -462,19 +479,23 @@ a:hover {
   max-width: 300px;
   border-radius: 5px;
   display: inline-block;
+
 }
 .main-login-form {
   position: relative;
+  font-size: 18px;
+  background-image: url("town.jpg");
 }
 .login-form-1 .form-control {
   border: 0;
   box-shadow: 0 0 0;
   border-radius: 0;
   background: transparent;
-  color: #555555;
+  color: #B1B1B1;
   padding: 7px 0;
   font-weight: bold;
   height:auto;
+
 }
 .login-form-1 .form-control::-webkit-input-placeholder {
   color: #999999;
@@ -489,6 +510,7 @@ a:hover {
   border-bottom: 2px solid #efefef;
   padding-right: 20px;
   position: relative;
+
 }
 .login-form-1 .form-group:last-child {
   border-bottom: 0;
@@ -501,6 +523,12 @@ a:hover {
   border-style: solid;
   border-color: black;
   padding: 10px 20px;
+  background-image: url("form.jpg");
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+  background-repeat: no repeat;
+  background-size: 100% 100%;
 }
 .login-group-checkbox {
   padding: 5px 0;
@@ -510,13 +538,13 @@ a:hover {
   position: absolute;
   right: -25px;
   top: 50%;
-  background: #ffffff;
-  color: #999999;
+  background: #424141;
+  color: #000000;
   padding: 11px 0;
   width: 50px;
   height: 50px;
   margin-top: -25px;
-  border: 5px solid #efefef;
+  border: 5px solid white;
   border-radius: 50%;
   transition: all ease-in-out 500ms;
 }

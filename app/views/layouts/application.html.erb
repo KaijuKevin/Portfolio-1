@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>
 <body>
+  <%- flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+  <%- end -%>
   <div class="wrapper">
     <div class="box">
       <div class="row row-offcanvas row-offcanvas-left">
