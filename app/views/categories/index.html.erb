@@ -1,22 +1,26 @@
+<div class="well">
 <h1>Spiral out, keep going.</h1>
 
-<p>My name is Leon Zagorouiko and I'm currently attending Epicodus.</p>
+<h3>My name is Leon Zagorouiko and I'm currently attending Epicodus.</h3>
 <ul>
-  <li>github: https://github.com/Zagorouiko</li>
+  <li><h2>github: https://github.com/Zagorouiko</h2></li>
 </ul>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<h2>References</h2>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="jumbotron">
+<h2>Reference ScoreBoard</h2>
 	<div id="recommendation_form_container">
 	</div>
 	<% if user_signed_in? %>
 		<p><%= link_to "Add recommendation", new_recommendation_path, id: "new_recommendation_link", remote: true %><p>
 	<% else %>
-		<p>Please sign in to add a recommendation.</p>
+		<h3>Please sign in to add a recommendation.</h3>
 	<% end %>
 		<div id="recommendations_list">
       <ul>
         <% @recommendations.each do |recommendation| %>
-          <li> <%= recommendation.description %> - <%= recommendation.user.username %> </li>
+          <li><b><h4><%= recommendation.description %> - <%= recommendation.user.username %></h4></b> </li>
         <% end %>
       </ul>
     </div>
+  </div>

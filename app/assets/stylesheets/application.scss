@@ -32,6 +32,42 @@
  // Whatever application styles you have go last
  // @import "base";
 
+ .jumbotron {
+   background: image-url("well.gif");
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   margin-bottom: 0px;
+   text-align: right;
+   border-radius: 8%;
+   opacity: 0.9;
+ }
+
+.well {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgba(120, 158, 90, 0.31);
+  }
+
+h1 {
+  font-family: orbitron;
+}
+
+h2 {
+  font-family: orbitron;
+}
+
+h3 {
+  font-family: orbitron;
+}
+
+h4 {
+  font-family: orbitron;
+}
+
+
+
+
+
 .img-responsive {
   border-radius: 10%;
 }
@@ -56,6 +92,7 @@
 #main {
   text-align: center;
   background: black;
+  font-family: Orbitron;
 }
 
 
@@ -201,6 +238,7 @@ hr {
   padding-right:0;
   background: image-url("town.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 #main .img-circle {
   margin-top:18px;
@@ -313,6 +351,8 @@ h1,h2,h3 {
 
 .col-sm-9.full {
   width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .modal-header, .modal-footer {
