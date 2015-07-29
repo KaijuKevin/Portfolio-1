@@ -13,6 +13,7 @@ gem 'cancancan'
 gem 'turbolinks'
 gem 'bootswatch-rails'
 gem 'bootstrap_form'
+gem 'paperclip'
 gem 'rails_12factor', group: :production
 
 
