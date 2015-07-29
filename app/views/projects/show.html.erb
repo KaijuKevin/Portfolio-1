@@ -1,15 +1,15 @@
 <div class="well">
 <h1><%= @category.name %></h1>
 
-<b><% if @category.projects.any? %>
-  <h4>Projects List:</h4>
+<b><% if @category.projects.any? %></b>
+  <b><h4>Projects List:</h4></b>
 
   <ul>
-    <% @category.projects.each do |project| %>
+    <b><% @category.projects.each do |project| %></b>
 
-        <li>Name: <u><%= project.name %></u></li><br>
-        <li>Description: <%= project.description %></li><br>
-        <li>Link: <%= project.link %></li><br></b>
+        <b><li>Name: <u><%= project.name %></u></li><br></b>
+        <b><li>Description: <%= project.description %></li><br></b>
+        <b><li>Link: <%= project.link %></li><br></b>
 
         <%= link_to "Edit", edit_category_project_path(@category, project) %> |
         <%= link_to "Delete", category_project_path(@category, project),
