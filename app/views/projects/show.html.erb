@@ -1,3 +1,4 @@
+<div class="well">
 <h1><%= @category.name %></h1>
 
 <% if @category.projects.any? %>
@@ -6,11 +7,9 @@
   <ul>
     <% @category.projects.each do |project| %>
 
-        <div class= 'well'>
         <li>Name: <%= project.name %></li><br>
         <li>Description: <%= project.description %></li><br>
         <li>Link: <%= project.link %></li><br>
-      </div>
 
         <%= link_to "Edit", edit_category_project_path(@category, project) %> |
         <%= link_to "Delete", category_project_path(@category, project),
@@ -22,3 +21,4 @@
 <% else %>
   <p>There are no projects yet!</p>
 <% end %>
+</div>

@@ -64,10 +64,6 @@ h4 {
   font-family: orbitron;
 }
 
-
-
-
-
 .img-responsive {
   border-radius: 10%;
 }
@@ -311,7 +307,8 @@ h1,h2,h3 {
   text-shadow:0 0 1px rgba(0,0,0,.3);
 }
 .form-control {
-
+  background-color: rgba(0, 0, 0, 0.42);
+  color: white;
 }
 
 .panel textarea, .well textarea, textarea.form-control
@@ -445,7 +442,7 @@ body {
 }
 /*=== 2. Anchor Link ===*/
 a {
-  color: #aaaaaa;
+  color: #FFFFFF;
   transition: all ease-in-out 200ms;
 }
 a:hover {
