@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/default.jpg", :storage => :s3, :bucket => 'zagorouiko', :s3_credentials => s3_credentials
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" }, :default_url => "/images/default.jpg", :storage => :s3, :bucket => 'zagorouiko'
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   has_many :comments
