@@ -14,6 +14,7 @@ gem 'turbolinks'
 gem 'bootswatch-rails'
 gem 'bootstrap_form'
 gem 'paperclip'
+gem 'aws-sdk'
 gem 'rails_12factor', group: :production
 
 
