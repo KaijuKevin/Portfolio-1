@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
      :storage => :s3,
      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
      :bucket => 'zagorouiko',
-     :path => ":class/:attachment/:id/:style.:extension",
+     :path => ":class/:attachment/:id/:style.:extension"
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   has_many :comments
