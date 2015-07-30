@@ -19,7 +19,7 @@
 		<div id="recommendations_list">
       <ul>
         <% @recommendations.each do |recommendation| %>
-          <li><b><h4><%= image_tag(recommendation.user.avatar) %><b><%= recommendation.description %></b> - <b><%= recommendation.user.username %></b></h4></b> </li>
+          <h4><div class="recom" <%= image_tag(recommendation.user.avatar) %></div><b><%= recommendation.description %></b> - <b><%= recommendation.user.username %></b></h4>
         <% end %>
       </ul>
     </div>

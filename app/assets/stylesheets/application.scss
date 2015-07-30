@@ -32,6 +32,15 @@
  // Whatever application styles you have go last
  // @import "base";
 
+ .recom {
+   border: 1px solid #d9d9d9;
+   border-radius: 25px;
+   -moz-border-radius: 25px;
+   -webkit-border-radius: 25px;
+   height: 50px;
+   width: 50px;
+ }
+
  .stuff {
    font-family: Orbitron;
    color: #00F700;
