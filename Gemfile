@@ -15,7 +15,6 @@ gem 'bootswatch-rails'
 gem 'bootstrap_form'
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'aws-s3'
 gem 'rails_12factor', group: :production
 
 
