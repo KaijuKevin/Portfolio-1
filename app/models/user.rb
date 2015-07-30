@@ -5,7 +5,10 @@ class User < ActiveRecord::Base
      :default_url => "/images/default.jpg",
      :storage => :s3,
      :bucket => 'zagorouiko',
-     :path => ":class/:attachment/:id/:style.:extension"
+     :path => ":class/:attachment/:id/:style.:extension",
+     :s3_credentials => S3_CREDENTIALS,
+     :url => "/:image/:id/:style/:basename.:extension",
+     :path => ":image/:id/:style/:basename.:extension"
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   has_many :comments
