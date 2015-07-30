@@ -32,6 +32,15 @@
  // Whatever application styles you have go last
  // @import "base";
 
+ .stuff {
+   font-family: Orbitron;
+   color: #00F700;
+ }
+
+ li {
+   font-family: Orbitron;
+ }
+
  .round-image-50 {
    background-color: white;
    border: 1px solid #d9d9d9;
