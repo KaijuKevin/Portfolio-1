@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
      :thumb => "100x100#" },
      :default_url => "/images/default.jpg",
      :storage => :s3,
-     :s3_credentials => "#{Rails_root}/config/s3.yml",
      :bucket => 'zagorouiko',
      :path => ":class/:attachment/:id/:style.:extension"
   validates_attachment_content_type :avatar, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
