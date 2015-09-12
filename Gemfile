@@ -16,7 +16,7 @@ gem 'bootstrap_form'
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
 gem 'rails_12factor', group: :production
-
+gem 'dotenv-rails'
 
 
 group :development do
